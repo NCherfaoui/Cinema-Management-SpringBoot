@@ -1,0 +1,31 @@
+<!DOCTYPE html >
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org/"  lang="">
+<head>
+    <meta charset="UTF-8">
+    <title>Acteurs</title>
+</head>
+<body>
+<h1>Acteurs</h1>
+
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nom</th>
+            <th>Prénom</th>
+            <th>Date de Naissance</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Utilisation de Thymeleaf pour itérer sur la liste des acteurs -->
+        <tr th:each="acteur : ${acteurs}">
+            <td th:text="${acteur.id}"></td>
+            <td th:text="${acteur.nom}"></td>
+            <td th:text="${acteur.prenom}"></td>
+            <td th:text="${acteur.dateNaissance}"></td>
+        </tr>
+    </tbody>
+</table>
+
+</body>
+</html>
