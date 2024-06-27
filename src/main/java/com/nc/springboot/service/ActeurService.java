@@ -40,9 +40,9 @@ public class ActeurService {
     public void deleteActeur(Long id) {
         acteurRepository.deleteById(id);
     }
-    public Acteur createActeur(String nom, String prenom, String dateNaissance) {
+    public void createActeur(String nom, String prenom, String dateNaissance, String photo) {
 
-        Acteur acteur = new Acteur(nom, prenom, dateNaissance);
-        return acteurRepository.save(acteur);
+        Acteur acteur = new Acteur(nom, prenom, dateNaissance, photo);
+        acteurRepository.save(acteur);
     }
 }

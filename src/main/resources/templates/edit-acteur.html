@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org/"  lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Modifier un acteur</title>
+</head>
+<body>
+<h1>Modifier un acteur</h1>
+<!--<form th:action="@{/acteurs/{id}/update(id=${acteur.id})}" th:object="${acteur}" method="post">-->
+<form th:action="@{/acteurs/update}" th:object="${acteur}" method="post">
+    <input type="hidden" th:field="*{id}" id="id" />
+    <label for="nom">Nom</label>
+    <input type="text" th:field="*{nom}" id="nom" />
+    <label for="prenom">Prenom</label>
+    <input type="text" th:field="*{prenom}" id="prenom" />
+    <label for="dateNaissance">Date de naissance</label>
+    <input type="date" th:field="*{dateNaissance}" id="dateNaissance" />
+    <input type="submit" value="Modifier" />
+</form>
+
+</body>
+</html>

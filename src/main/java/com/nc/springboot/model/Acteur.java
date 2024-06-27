@@ -34,17 +34,27 @@ public class Acteur {
     private String dateNaissance;
 
     // Constructeur par défaut requis par JPA.
+    @Basic
+    private String photo;
+
     public Acteur() {
     }
-
     // Constructeur pour créer une nouvelle instance de Acteur.
+
     public Acteur(String nom, String prenom, String dateNaissance) {
         this.nom = nom;
         this.prenom = prenom;
         this.dateNaissance = dateNaissance;
     }
 
+    public Acteur(String nom, String prenom, String dateNaissance, String photo) {
+        this.nom = nom;
+        this.prenom = prenom;
+        this.dateNaissance = dateNaissance;
+        this.photo = photo;
+    }
     // Méthode toString pour représenter l'entité Acteur sous forme de chaîne de caractères.
+
     @Override
     public String toString() {
         return "Acteur{" +
@@ -54,4 +64,5 @@ public class Acteur {
                 ", dateNaissance='" + dateNaissance + '\'' +
                 '}';
     }
+
 }

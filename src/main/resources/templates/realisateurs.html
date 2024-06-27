@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org/"  lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>Realisateurs</h1>
+    <table>
+        <tr>
+            <th>Id</th>
+            <th>Nom</th>
+            <th>Prenom</th>
+            <th>Date de naissance</th>
+            <th>Actions</th>
+        </tr>
+        <tr th:each="realisateur : ${realisateurs}">
+            <td th:text="${realisateur.id}"></td>
+            <td th:text="${realisateur.nom}"></td>
+            <td th:text="${realisateur.prenom}"></td>
+            <td th:text="${realisateur.dateNaissance}"></td>
+            <td>
+                <a th:href="@{/realisateurs/{id}/edit(id=${realisateur.id})}">Modifier</a>
+                <a th:href="@{/realisateurs/{id}/delete(id=${realisateur.id})}">Supprimer</a>
+            </td>
+        </tr>
+    </table>
+    <a href="/realisateurs/add">Ajouter un realisateur</a>
+
+</body>
+</html>

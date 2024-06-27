@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org/"  lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Ajouter un acteur</h1>
+<form th:action="@{/acteurs/add}" th:object="${acteur}" method="post">
+    <label for="nom">Nom</label>
+    <input type="text" th:field="*{nom}" id="nom" />
+    <label for="prenom">Prenom</label>
+    <input type="text" th:field="*{prenom}" id="prenom" />
+    <label for="dateNaissance">Date de naissance</label>
+    <input type="date" th:field="*{dateNaissance}" id="dateNaissance" />
+    <input type="submit" value="Ajouter" />
+</form>
+</body>
+</html>
