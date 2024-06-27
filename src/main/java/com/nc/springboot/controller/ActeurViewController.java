@@ -23,6 +23,10 @@ public class ActeurViewController {
     @Autowired
     private ActeurService acteurService;
 
+    public ActeurViewController(ActeurService acteurService) {
+        this.acteurService = acteurService;
+    }
+
     // Cette méthode est utilisée pour afficher la liste des acteurs.
     // L'annotation @RequestMapping est utilisée pour mapper les requêtes HTTP GET sur cette méthode.
     @RequestMapping("/acteurs")

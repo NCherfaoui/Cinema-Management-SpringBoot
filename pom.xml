@@ -13,6 +13,7 @@
     <version>0.0.1-SNAPSHOT</version>
     <name>spring-boot</name>
     <description>spring-boot</description>
+    <packaging>jar</packaging>
     <url/>
     <licenses>
         <license/>
@@ -92,7 +93,9 @@
                 </configuration>
                 <executions>
                     <execution>
+                        <!-- Pour la production de l'application avec Docker Compose -->
                         <goals>
+                            <!-- Pour la création du jar -->
                             <goal>repackage</goal>
                         </goals>
                     </execution>
