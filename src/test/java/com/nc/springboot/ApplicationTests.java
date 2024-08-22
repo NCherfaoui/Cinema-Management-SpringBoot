@@ -20,9 +20,9 @@ public class ApplicationTests {
 
     @Test
     public void testShowActeurForm() throws Exception {
-        RequestBuilder request = MockMvcRequestBuilders.get("/acteur");
+        RequestBuilder request = MockMvcRequestBuilders.get("/acteurs");
         mockMvc.perform(request)
                 .andExpect(status().isOk())
-                .andExpect(view().name("acteur"));
+                .andExpect(view().name("acteurs"));
     }
 }
