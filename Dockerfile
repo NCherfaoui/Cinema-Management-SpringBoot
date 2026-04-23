@@ -1,5 +1,5 @@
 # Utiliser une image de base Java 11
-FROM openjdk:24-slim
+FROM openjdk:25-slim
 LABEL authors="Nassim"
 
 # Variables d'environnement pour le nom de l'application et le port
