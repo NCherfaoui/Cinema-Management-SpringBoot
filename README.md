@@ -27,4 +27,3 @@ Un projet Spring Boot pour la gestion d'un cinéma. Il comprend des fonctionnali
 - Accédez à `http://localhost:8080/genres` pour voir la liste des genres.
 
 Vous pouvez ajouter, modifier et supprimer des acteurs, des films, des réalisateurs et des genres à partir de leurs pages respectives.
-
